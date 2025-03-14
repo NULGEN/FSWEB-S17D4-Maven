@@ -1,6 +1,7 @@
 # SQL Sorgu Alıştırmaları
 
-Bu hafta SQL sorguları üzerine çalışıyorsunuz. Bugünkü alıştırmada sizin için hazırladığımız veritabanında aşağıda istediğimiz sonuçları elde etmenize yarayan SQL sorgularını oluşturacaksınız.
+Bu hafta SQL sorguları üzerine çalışıyorsunuz. Bugünkü alıştırmada sizin için hazırladığımız veritabanında aşağıda istediğimiz sonuçları elde etmenize yarayan 
+SQL sorgularını oluşturacaksınız.
 
 # Proje Kurulumu
 Projeyi forklayın ve clonlayın. Tamamladığınızda da pushlayın.
