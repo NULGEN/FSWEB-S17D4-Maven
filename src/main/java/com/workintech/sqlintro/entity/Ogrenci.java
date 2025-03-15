@@ -2,12 +2,10 @@ package com.workintech.sqlintro.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Entity
 @Table(name = "ogrenci")
 public class Ogrenci {
@@ -21,4 +19,22 @@ public class Ogrenci {
     private int puan;
     @Column(nullable = true)
     private String dtarih;
+
+    // Elle Getter ve Setter ekleyelim:
+    public String getAd() {
+        return ad;
+    }
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+
+    public String getSoyad() {
+        return soyad;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
 }
+

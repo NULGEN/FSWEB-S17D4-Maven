@@ -9,27 +9,27 @@ import java.util.List;
 public interface OgrenciRepository extends JpaRepository<Ogrenci, Long> {
 
     //Öğrenci tablosundaki tüm kayıtları listeleyin.
-    String QUESTION_1 = "SELECT * fROM ogrenci";
+    String QUESTION_1 = "SELECT * FROM ogrenci";
     @Query(value = QUESTION_1, nativeQuery = true)
     List<Ogrenci> findAll();
 
     //Öğrenci tablosundaki kız öğrencileri listeleyin.
-    String QUESTION_2 = "SELECT * fROM ogrenci WHERE cinsiyet = 'K'";
+    String QUESTION_2 = "SELECT * FROM ogrenci WHERE cinsiyet = 'K'";
     @Query(value = QUESTION_2, nativeQuery = true)
     List<Ogrenci> findGirls();
 
     //Öğrenci tablosunda kaydı bulunan sınıfların adını her sınıf bir kez görüntülenecek şekilde listeleyiniz
-    String QUESTION_3 = "SELECT DISTINCT sinif fROM ogrenci";
+    String QUESTION_3 = "SELECT DISTINCT sinif FROM ogrenci";
     @Query(value = QUESTION_3, nativeQuery = true)
     List<String> findAllClasses();
 
     //Öğrenci tablosunda, 10A sınıfında olan kız öğrencileri listeleyiniz.
-    String QUESTION_4 = "SELECT * fROM ogrenci WHERE cinsiyet= 'K' AND sinif = '10A';";
+    String QUESTION_4 = "SELECT * FROM ogrenci WHERE cinsiyet= 'K' AND sinif = '10A';";
     @Query(value = QUESTION_4, nativeQuery = true)
     List<Ogrenci> find10AGirls();
 
     //Öğrenci numarası 5 ile 10 arasında olan Kız öğrencileri listeleyiniz.
-    String QUESTION_5 = "SELECT * fROM ogrenci WHERE cinsiyet= 'K' AND ogrno >=5 AND ogrno <=10 ";
+    String QUESTION_5 = "SELECT * FROM ogrenci WHERE cinsiyet= 'K' AND ogrno >=5 AND ogrno <=10 ORDER BY ad ";
     @Query(value = QUESTION_5, nativeQuery = true)
     List<Ogrenci> findGirlsWithOgrno();
 
